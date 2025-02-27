@@ -1,36 +1,34 @@
 #include <stdio.h>
 // Definição da estrutura Cidade
  {
-    char Piauí;
-    char Terezina[30];
-    int 003;
-    int 886.300;
-    float 1.391,981 km²;
-    float 21.578.875,01;
-    int 15;
-    float 12,4 hab./km²;
-}
+    char estado;
+    char Cidade[30];
+    int numero_da_cidade;
+    int pop;
+    float area;
+    float pib;
+    int pontos_turisticos;
+    float densidade_demografica;
+} cidade;
 
-// Função para entrada de dados
-void entrada_dados( cidade *c) {
-    printf("Estado (A-H): ");
-    scanf(" %c", &c-> Goías);
+void entrada_dados(cidade *c) {
+    printf(" GOÍAS (A-H): ");
+    scanf(" %c", &c->estado);
     c->estado = toupper(c->estado);
-    printf("Goías: ");
+    printf("Goiania: ");
     scanf(" %[^\n]", c->cidade);
-    printf("Digite o código da carta: (1-4): ");
-    scanf("%d", &c->numero_da_cidade);
-    printf("Digite a População: ");
+    printf("4: (1-4): ");
+    scanf("%d", &c->numero_da_cidade)
+    printf("03: ");
     scanf("%d", &c->pop); 
-    printf("Digite a Área: km²: ");
+    printf(" 728,296: km²: ");
     scanf("%f", &c->area);
-    printf("Digite o PIB: ");
+    printf("1 494 599: ");
     scanf("%f", &c->pib);
-    printf("Digite o Número de pontos turísticos: ");
+    printf(" 16: ");
     scanf("%d", &c->pontos_turisticos);
     
-    // Calculando a densidade demográfica
-    if (c->area > 0) {
+   if (c->area > 0) {
         c->densidade_demografica = (float)c->pop / c->area; // Densidade demográfica
     } else {
         c->densidade_demografica = 0; // Evitar divisão por zero
